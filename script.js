@@ -20,24 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
     function applyTheme(theme) {
         html.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
-        
-        document.querySelectorAll('.theme-btn').forEach(function(btn) {
-            btn.classList.remove('active');
-            if (btn.getAttribute('data-theme') === theme) {
-                btn.classList.add('active');
-            }
+
+        [themeSwitcher, mobileThemeSwitcher].forEach(function(btn) {
+            if (btn) btn.setAttribute('data-theme', theme);
         });
     }
 
     applyTheme(getPreferredTheme());
 
-    function setupThemeSwitcher(switcher) {
-        if (switcher) {
-            switcher.querySelectorAll('.theme-btn').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    const theme = this.getAttribute('data-theme');
-                    applyTheme(theme);
-                });
+    function setupThemeSwitcher(btn) {
+        if (btn) {
+            btn.addEventListener('click', function() {
+                const current = html.getAttribute('data-theme');
+                const next = current === 'dark' ? 'light' : 'dark';
+                applyTheme(next);
             });
         }
     }
