@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lei OAB | Roberto Advocacia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .policy-page {
+            padding-top: 120px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+            background: var(--background);
+        }
+
+        .policy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .policy-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .policy-header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .policy-header .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .policy-content h2 {
+            font-size: 1.35rem;
+            color: var(--text);
+            margin-top: 36px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--accent);
+            display: inline-block;
+        }
+
+        .policy-content h3 {
+            font-size: 1.1rem;
+            color: var(--text);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        .policy-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .policy-content ul {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+
+        .policy-content ul li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .law-highlight {
+            background: var(--card);
+            border-left: 4px solid var(--accent);
+            padding: 20px 24px;
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 24px 0;
+            border: 1px solid var(--border);
+        }
+
+        .law-highlight p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: var(--text);
+        }
+
+        .law-highlight .law-ref {
+            display: block;
+            margin-top: 8px;
+            font-weight: 600;
+            font-style: normal;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 40px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            gap: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-balance-scale"></i>
+                <span>Roberto Advocacia</span>
+            </a>
+            <nav class="nav" id="nav">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="index.html#areas">Áreas de Atuação</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="lei-oab.html">Lei OAB</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- LEI OAB -->
+    <main class="policy-page">
+        <div class="policy-container">
+            <div class="policy-header">
+                <h1>Lei OAB</h1>
+                <p class="subtitle">Lei Federal nº 8.906/1994 — Estatuto da Advocacia e a Ordem dos Advogados do Brasil</p>
+            </div>
+
+            <div class="policy-content">
+                <h2>1. Apresentação</h2>
+                <p>A Lei nº 8.906, de 6 de setembro de 1994, é o Estatuto da Advocacia e da Ordem dos Advogados do Brasil (OAB). Esta lei regulamenta o exercício da advocacia no Brasil, definindo direitos, deveres e prerrogativas dos advogados, bem como o funcionamento e as competências da OAB.</p>
+
+                <div class="law-highlight">
+                    <p>"É privativo dos advogados o exercício da advocacia, salvo os casos previstos em lei."</p>
+                    <span class="law-ref">— Art. 1º da Lei nº 8.906/1994</span>
+                </div>
+
+                <h2>2. Disposições Preliminares</h2>
+                <p>A advocacia é indispensável à administração da justiça. O advogado é intermediário entre a sociedade e o Estado, garantindo o acesso à justiça e a defesa dos direitos dos cidadãos.</p>
+
+                <h2>3. Da Advocacia</h2>
+                <p>São atividades privativas de advogado:</p>
+                <ul>
+                    <li>Participar, como advogado, de juízo, tribunal ou de órgão arbitral;</li>
+                    <li>Patrocinar ações judiciais ou extrajudiciais;</li>
+                    <li>Exercer consultoria jurídica;</li>
+                    <li>Representar clientes perante a Administração Pública;</li>
+                    <li>Exercer atividade de assessoria jurídica, de consultoria ou de assessoria;</li>
+                    <li>Levar a parecer, a Recommendation ou a informação jurídica a conhecimento do cliente;</li>
+                    <li>Elaborar contratos, petições, recursos e demais atos processuais.</li>
+                </ul>
+
+                <h2>4. Da Ordem dos Advogados do Brasil (OAB)</h2>
+                <p>A OAB é uma entidade de direito público, dotada de personalidade jurídica e autonomia, que tem por finalidade:</p>
+                <ul>
+                    <li>Defender a Constituição, a ordem jurídica e o regime democrático;</li>
+                    <li>Velar pela dignidade, independência, eficiência e moralidade da advocacia;</li>
+                    <li>Exercer o poder disciplinar e orientação profissional dos inscritos;</li>
+                    <li>Representar os advogados perante as autoridades competentes;</li>
+                    <li>Colaborar com o aperfeiçoamento das leis, costumes, jurisprudência e doutrina;</li>
+                    <li>Representar os advogados no pedido e na defesa de seus direitos e interesses coletivos ou individuais.</li>
+                </ul>
+
+                <h2>5. Da Inscrição</h2>
+                <p>Para exercer a advocacia, é necessário estar inscrito na OAB. A inscrição é obrigatória e dar-se-á na Subseção da respectiva área de atuação do profissional.</p>
+
+                <div class="law-highlight">
+                    <p>"A inscrição é o ato de incorporação do advogado à OAB. É condição para o exercício da advocacia e vitalícia, subsistindo embora suspensa ou cancelada a habilitação do profissional."</p>
+                    <span class="law-ref">— Art. 8º da Lei nº 8.906/1994</span>
+                </div>
+
+                <h2>6. Dos Direitos do Advogado</h2>
+                <p>O advogado goza dos seguintes direitos:</p>
+                <ul>
+                    <li>Exercer a advocacia em caráter individual ou em sociedade;</li>
+                    <li>Ter liberdade de escolha do local de trabalho, em Juízo ou fora dele;</li>
+                    <li>Ver-se livre de insinuações ou da entrada de colegas em seu escritório ou local de trabalho;</li>
+                    <li>Receber os honorários de assistência judiciária e os honorários contratuais;</li>
+                    <li>Ter prazos diferenciados para a defesa de sua atuação;</li>
+                    <li>Não ser preso, salvo em flagrante, por qualquer tipo de delito que não aqueles para os quais a Constituição Federal comina a pena de reclusão;</li>
+                    <li>Não ser recolhido à prisão civil, salvo a do depositário infiel e a do devedor de alimentos;</li>
+                    <li>Não ser indiciado, processado ou preso senão perante a Justiça Estadual;</li>
+                    <li>Não ser preso por dívida, multa ou custas, exceto depositário infiel;</li>
+                    <li>Não ser submetido a escrutínio que atente contra a dignidade da profissão.</li>
+                </ul>
+
+                <h2>7. Dos Deveres do Advogado</h2>
+                <p>O advogado é obrigado a cumprir rigorosamente os deveres consistentes em:</p>
+                <ul>
+                    <li>Ensinar o Direito e participar de sua formulação;</li>
+                    <li>Prevenir a consumação de injustiças e, quando forem testadas, conduzir-lhes a solução;</li>
+                    <li>Provocar a atividade dos órgãos jurisdicionais quando necessário;</li>
+                    <li>Prestar o patrocínio judiciário a quem o necessitar;</li>
+                    <li>Manter sigilo sobre fatos que tome conhecimento em razão de sua atividade profissional;</li>
+                    <li>Respeitar os colegas, juízes, membros do Ministério Público e demais operadores do Direito;</li>
+                    <li>Respeitar os Regimentos e normas dos órgãos judiciários;</li>
+                    <li>Manter conduta compatível com a dignidade, a honra e a probidade da profissão;</li>
+                    <li>Exercer a advocacia com dedicação, competência e zelo.</li>
+                </ul>
+
+                <h2>8. Da Irrenunciabilidade e da Inviolabilidade</h2>
+                <p>O advogado é inviolável por suas manifestações no exercício de sua profissão, com ressalva das prerrogativas inerentes ao Ministério Público e à Magistratura.</p>
+
+                <div class="law-highlight">
+                    <p>"Não pode ser preso em flagrante, por qualquer motivo que não seja crime inafiançável, o advogado quando estiver no exercício de sua atividade profissional."</p>
+                    <span class="law-ref">— Art. 7º da Lei nº 8.906/1994</span>
+                </div>
+
+                <h2>9. Da Remuneração</h2>
+                <p>O advogado tem direito a receber honorários contratados com seu cliente, bem como honorários fixados por decisão judicial ou arbitral.</p>
+
+                <h2>10. Do Processo Disciplinar</h2>
+                <p>O advogado está sujeito a processo disciplinar quando pratica condutas contrárias às normas do Estatuto da Advocacia, dos Regimentos Internos ou do Código de Ética e Disciplina da OAB.</p>
+
+                <h2>11. Das Penas</h2>
+                <p>As penas disciplinares aplicáveis são:</p>
+                <ul>
+                    <li>Advertência;</li>
+                    <li>Censura;</li>
+                    <li>Suspensão do exercício profissional;</li>
+                    <li>Cassação do cartão de identidade profissional;</li>
+                    <li>Cassação da inscrição.</li>
+                </ul>
+
+                <h2>12. Disposições Finais</h2>
+                <p>A Lei nº 8.906/1994 entrou em vigor na data de sua publicação, com vigência a partir de 18 de setembro de 1994. Alterações posteriores foram introduzidas pela Emenda Constitucional nº 45/2004 e por leis ordinárias complementares.</p>
+
+                <p>Para consulta integral ao texto da Lei nº 8.906/1994, acesse o <strong>site oficial da OAB</strong> ou o <strong>portal da Câmara dos Deputados</strong>.</p>
+
+                <a href="index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Voltar ao site
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roberto Advocacia. Todos os direitos reservados.</p>
+                <p><a href="privacidade.html">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var html = document.documentElement;
+            var themeToggle = document.getElementById('themeToggle');
+            var themeIcon = document.getElementById('themeIcon');
+
+            function getPreferredTheme() {
+                return localStorage.getItem('theme') || 'dark';
+            }
+
+            function applyTheme(theme) {
+                html.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                if (themeIcon) {
+                    themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+                }
+            }
+
+            applyTheme(getPreferredTheme());
+
+            if (themeToggle) {
+                themeToggle.addEventListener('click', function () {
+                    var current = html.getAttribute('data-theme');
+                    applyTheme(current === 'dark' ? 'light' : 'dark');
+                });
+            }
+
+            var menuToggle = document.getElementById('menuToggle');
+            var nav = document.getElementById('nav');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', function () {
+                    nav.classList.toggle('active');
+                    var icon = menuToggle.querySelector('i');
+                    icon.className = nav.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

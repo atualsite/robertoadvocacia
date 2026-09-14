@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto Advocacia | Direito Previdenciário, Criminal e Trabalhista</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- COOKIE BANNER -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <p>Este site utiliza cookies para melhorar sua experiência de navegação. Ao continuar navegando, você concorda com o uso de cookies. Para mais informações, leia nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="btn-cookie btn-cookie-accept" id="cookieAccept">Aceitar Cookies</button>
+                <button class="btn-cookie btn-cookie-reject" id="cookieReject">Não Aceitar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG Filter for Glass Effect -->
+    <svg style="display: none;">
+        <filter id="glass-distortion">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+    </svg>
+
+    <!-- HEADER -->
+    <header class="header glass-nav" id="header">
+        <div class="glass-filter"></div>
+        <div class="glass-overlay"></div>
+        <div class="glass-specular"></div>
+        <div class="container header-inner glass-content">
+            <a href="#inicio" class="logo">
+                <span class="logo-icon"><i class="fas fa-balance-scale"></i></span>
+                <span class="logo-text">Roberto<span class="logo-accent">Advocacia</span></span>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#inicio" class="nav-link">Início</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#areas" class="nav-link">Áreas</a>
+                <a href="#depoimentos" class="nav-link">Depoimentos</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-switcher" id="themeSwitcher">
+                    <button class="theme-btn" data-theme="light" aria-label="Modo claro">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Modo escuro">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <a href="https://wa.me/5511990000000" class="btn btn-primary header-cta" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Falar com Advogada
+                </a>
+            </div>
+            <div class="mobile-header-actions">
+                <div class="theme-switcher mobile-theme-switcher" id="mobileThemeSwitcher">
+                    <button class="theme-btn" data-theme="light" aria-label="Modo claro">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    </button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Modo escuro">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </button>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <nav class="mobile-nav-links">
+            <a href="#inicio" class="mobile-nav-link">Início</a>
+            <a href="#sobre" class="mobile-nav-link">Sobre</a>
+            <a href="#areas" class="mobile-nav-link">Áreas</a>
+            <a href="#depoimentos" class="mobile-nav-link">Depoimentos</a>
+            <a href="#contato" class="mobile-nav-link">Contato</a>
+            <a href="privacidade.html" class="mobile-nav-link">Privacidade</a>
+            <a href="lei-oab.html" class="mobile-nav-link">Lei OAB</a>
+            <a href="https://wa.me/5511990000000" class="btn btn-primary mobile-whatsapp-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> Falar com Advogada
+            </a>
+        </nav>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg">
+            <img src="advocacia1 (1).png" alt="Escritório Roberto Advocacia" class="hero-bg-img">
+            <div class="hero-bg-overlay"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle">Roberto Advocacia</p>
+                <h1 class="hero-title">Defendendo Seus Direitos com Excelência</h1>
+                <p class="hero-text">Assessoria jurídica especializada em Direito Previdenciário, Aposentadoria, Criminal e Trabalhista. Atendimento humanizado e resultados comprovados.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/5511990000000" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Falar com Advogada
+                    </a>
+                    <a href="#areas" class="btn btn-outline">Conheça nossos Serviços</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="advocacia1 (7).png" alt="Advogado Roberto Advocacia" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Casos Atendidos</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="90">0</span><span class="stat-plus">%</span>
+                    <span class="stat-label">Taxa de Sucesso</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Aposentadorias Conquistadas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="advocacia1 (1).jpg" alt="Sobre Roberto Advocacia" class="about-img">
+                </div>
+                <div class="about-content">
+                    <h2>Sobre a Roberto Advocacia</h2>
+                    <p class="section-subtitle">Compromisso com a Justiça e seus Direitos</p>
+                    <p>A Roberto Advocacia é um escritório especializado em defender os direitos de quem mais precisa. Com atuação focada em Direito Previdenciário, Aposentadoria, Criminal e Trabalhista, oferecemos um atendimento humanizado e técnico para garantir que nossos clientes recebam o que é de direito.</p>
+                    <p>Nossa missão é acessar a justiça de forma simples e eficiente, combatendo burocracias e assegurando benefícios previdenciários, defesas em âmbito criminal e direitos trabalhistas de forma ética e transparente.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Atendimento Humanizado</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Especialização em Previdenciário</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Defesa Criminal Competente</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transparência Total</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <div class="section-header">
+                <h2>Áreas de Atuação</h2>
+                <p class="section-subtitle">Especialistas em proteger seus direitos nas áreas mais importantes</p>
+            </div>
+            <div class="areas-grid">
+                <div class="area-card">
+                    <div class="area-img-wrapper">
+                        <img src="advocacia1 (4).png" alt="Direito Previdenciário" class="area-img">
+                    </div>
+                    <div class="area-content">
+                        <div class="area-icon"><i class="fas fa-id-card"></i></div>
+                        <h3>Direito Previdenciário</h3>
+                        <p>Aposentadoria por invalidez, por tempo de contribuição, benefício por incapacidade (auxílio-doença), pensão por morte e revisão de benefícios.</p>
+                        <a href="#contato" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-img-wrapper">
+                        <img src="advocacia1 (5).png" alt="Aposentadoria" class="area-img">
+                    </div>
+                    <div class="area-content">
+                        <div class="area-icon"><i class="fas fa-user-clock"></i></div>
+                        <h3>Aposentadoria</h3>
+                        <p>Planejamento previdenciário, análise de tempo de contribuição, requerimento de aposentadoria e acompanhamento junto ao INSS.</p>
+                        <a href="#contato" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-img-wrapper">
+                        <img src="advocacia1 (13).png" alt="Direito Criminal" class="area-img">
+                    </div>
+                    <div class="area-content">
+                        <div class="area-icon"><i class="fas fa-gavel"></i></div>
+                        <h3>Direito Criminal</h3>
+                        <p>Defesa em inquéritos e processos criminais, habeas corpus, recursos, defesas em delegacias e acompanhamento processual completo.</p>
+                        <a href="#contato" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="area-card">
+                    <div class="area-img-wrapper">
+                        <img src="advocacia1 (7).png" alt="Direito Trabalhista" class="area-img">
+                    </div>
+                    <div class="area-content">
+                        <div class="area-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3>Direito Trabalhista</h3>
+                        <p>Reclamações trabalhistas, verbas rescisórias, horas extras, adicional noturno, FGTS, assédio moral e acidentes de trabalho.</p>
+                        <a href="#contato" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header section-header--light">
+                <h2>Depoimentos</h2>
+                <p class="section-subtitle">O que nossos clientes dizem sobre nós</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Consegui minha aposentadoria após anos tentando sozinha. A Roberto Advocacia foi fundamental para resolver meu caso junto ao INSS. Profissionais excelentes!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Maria das Graças</h4>
+                            <span>Aposentada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Fui muito bem atendida em meu processo criminal. A equipe foi atenciosa, competente e conseguiu um resultado favorável. Super recomendo!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Roberto Silva</h4>
+                            <span>Empresário</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"Conquistei todas as verbas trabalhistas que me eram devidas. A Roberto Advocacia lutou pelo meu direito e venceu. Muito obrigada!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"><i class="fas fa-user"></i></div>
+                        <div class="author-info">
+                            <h4>Ana Paula Costa</h4>
+                            <span>Vendedora</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn" id="prevBtn" aria-label="Depoimento anterior"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-btn" id="nextBtn" aria-label="Próximo depoimento"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p class="section-subtitle">Estamos prontos para ajudá-lo com seu caso</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info-content">
+                            <h4>Endereço</h4>
+                            <p>Av. Paulista, 1000 - Sala 1501<br>São Paulo - SP, 01310-100</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="info-content">
+                            <h4>Telefone</h4>
+                            <p>(11) 3000-0000<br>(11) 99000-0000</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info-content">
+                            <h4>E-mail</h4>
+                            <p>contato@robertoadvocacia.com.br<br>consultas@robertoadvocacia.com.br</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="info-content">
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 09h às 18h<br>Sábado: 09h às 13h</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" name="phone" placeholder="Seu telefone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="area" name="area" required>
+                                <option value="">Selecione a área de interesse</option>
+                                <option value="previdenciario">Direito Previdenciário</option>
+                                <option value="aposentadoria">Aposentadoria</option>
+                                <option value="criminal">Direito Criminal</option>
+                                <option value="trabalhista">Direito Trabalhista</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Descreva brevemente seu caso..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Precisa de Assistência Jurídica?</h2>
+            <p>Entre em contato conosco e agende sua consulta inicial</p>
+            <a href="https://wa.me/5511990000000" class="btn btn-whatsapp btn-lg" target="_blank">
+                <i class="fab fa-whatsapp"></i> Falar com Advogada
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#inicio" class="footer-logo">
+                        <i class="fas fa-balance-scale"></i>
+                        Roberto Advocacia
+                    </a>
+                    <p>Defendendo seus direitos com excelência em Direito Previdenciário, Aposentadoria, Criminal e Trabalhista.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#areas">Áreas de Atuação</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Áreas de Atuação</h4>
+                    <ul>
+                        <li><a href="#areas">Direito Previdenciário</a></li>
+                        <li><a href="#areas">Aposentadoria</a></li>
+                        <li><a href="#areas">Direito Criminal</a></li>
+                        <li><a href="#areas">Direito Trabalhista</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - Sala 1501</li>
+                        <li><i class="fas fa-phone"></i> (11) 3000-0000</li>
+                        <li><i class="fas fa-envelope"></i> contato@robertoadvocacia.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Roberto Advocacia. Todos os direitos reservados.</p>
+                <p><a href="privacidade.html">Política de Privacidade</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511990000000" class="whatsapp-float" target="_blank" aria-label="Falar com advogada pelo WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Falar com Advogada</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
