@@ -140,6 +140,57 @@ document.addEventListener('DOMContentLoaded', function () {
     handleHeaderScroll();
 
     /* -----------------------------------------
+       WHATSAPP FLUTUANTE — MOBILE
+       ----------------------------------------- */
+    const whatsappFloat = document.querySelector('.whatsapp-float');
+    let whatsappTimer = null;
+
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
+
+    function showWhatsapp() {
+        if (whatsappFloat) {
+            whatsappFloat.classList.add('visible');
+        }
+    }
+
+    function hideWhatsapp() {
+        if (whatsappFloat) {
+            whatsappFloat.classList.remove('visible');
+        }
+    }
+
+    function handleWhatsappScroll() {
+        if (!isMobile()) {
+            showWhatsapp();
+            return;
+        }
+
+        if (window.scrollY > 100) {
+            if (!whatsappFloat.classList.contains('visible')) {
+                if (whatsappTimer) clearTimeout(whatsappTimer);
+                whatsappTimer = setTimeout(showWhatsapp, 3000);
+            }
+        } else {
+            if (whatsappTimer) clearTimeout(whatsappTimer);
+            hideWhatsapp();
+        }
+    }
+
+    window.addEventListener('scroll', handleWhatsappScroll);
+    handleWhatsappScroll();
+
+    window.addEventListener('resize', function() {
+        if (!isMobile()) {
+            showWhatsapp();
+            if (whatsappTimer) clearTimeout(whatsappTimer);
+        } else {
+            handleWhatsappScroll();
+        }
+    });
+
+    /* -----------------------------------------
        STATS — CONTADOR ANIMADO
        ----------------------------------------- */
     const statNumbers = document.querySelectorAll('.stat-number');
